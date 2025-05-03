@@ -10,8 +10,8 @@ export const Title = () => {
 };
 
 const StyledTitle = styled.p`
-  text-align: center;
   ${TEXT.L};
+  margin: 0;
   font-family: ${FONTFAMILY.ROBOTO};
   color: ${COLOR.WHITE};
   font-weight: 500;
