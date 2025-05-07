@@ -17,6 +17,7 @@ const StyledAddTaskButton = styled.div`
   padding: 2px 6px;
   gap: 10px;
   font-size: 14px;
+  color: ${COLOR.GREEN};
   border-radius: 12px;
   &:hover {
     background-color: ${COLOR.GREEN_TRANSLUCENT};
