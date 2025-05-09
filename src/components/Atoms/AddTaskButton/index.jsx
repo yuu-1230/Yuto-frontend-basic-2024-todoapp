@@ -6,7 +6,7 @@ export const AddTaskButton = () => {
   return (
     <StyledAddTaskButton>
       <StyledImg src={Plus} />
-      <StyledP>タスクを追加</StyledP>
+      <StyledText>タスクを追加</StyledText>
     </StyledAddTaskButton>
   );
 };
@@ -27,6 +27,6 @@ const StyledImg = styled.img`
   height: 20px;
   width: 20px;
 `;
-const StyledP = styled.p`
+const StyledText = styled.p`
   margin: 0px;
 `;
