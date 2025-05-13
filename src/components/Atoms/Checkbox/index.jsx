@@ -12,7 +12,7 @@ export const Checkbox = ({ onClick }) => {
 };
 
 const StyledCheckbox = styled.div`
-  display: inline-block;
+  /* display: inline-block; */
   display: flex;
   align-items: center;
   justify-content: center;
