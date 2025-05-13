@@ -13,16 +13,20 @@ export const Checkbox = ({ onClick }) => {
 
 const StyledCheckbox = styled.div`
   display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 20px;
   height: 20px;
   border-radius: 2px;
   border: 2px solid ${COLOR.LIGHT_GRAY_TRANSLUCENT};
+  box-sizing: border-box;
   &:hover img {
     visibility: visible;
   }
 `;
 const StyledImg = styled.img`
-  height: 20px;
-  width: 20px;
+  height: 100%;
+  width: 100%;
   visibility: hidden;
 `;
