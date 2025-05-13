@@ -18,7 +18,7 @@ const StyledCheckbox = styled.div`
   width: 20px;
   height: 20px;
   border-radius: 2px;
-  border: 2px solid ${COLOR.LIGHT_GRAY_TRANSLUCENT};
+  border: 2px solid ${COLOR.LIGHT_GRAY};
   box-sizing: border-box;
   &:hover img {
     visibility: visible;
