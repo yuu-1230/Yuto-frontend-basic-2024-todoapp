@@ -1,9 +1,5 @@
-import { useEffect } from "react";
-import React{useRef,useEffect} from "react";
+import { Input } from "./index";
 
-function Input = ({onEditComplete,defaultValue}) =>{
-    const inputref = useRef();
-    useEffect(()=>{
+export default { component: Input };
 
-    })
-}
+export const Default = {};
