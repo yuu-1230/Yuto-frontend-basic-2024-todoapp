@@ -4,19 +4,32 @@ import { Checkbox } from "../../Atoms/Checkbox";
 import { Editbutton } from "../../Atoms/Editbutton";
 import { Input } from "../../Atoms/Input";
 
-export const Task = () => {
+export const Task = ({
+  onTaskNameChange,
+  onTaskComplete,
+  taskName = "",
+  defaultsEditing = false,
+}) => {
+  const [isEditing, setIsEditing] = useState(defaultsEditing);
+  const onEditComplete = (value) => {
+    setIsEditing(false);
+    onTaskNameChange(value);
+  };
+  const onEditButtonClick = () => {
+    setIsEditing(true);
+  };
   return (
     <StyledWrapper>
       <StyledCheckboxWrapper>
-        <Checkbox />
+        <Checkbox onClick={onTaskComplete} />
       </StyledCheckboxWrapper>
       {isEditing ? (
-        <Input />
+        <Input onEditComplete={onEditComplete} defaultValue={taskName} />
       ) : (
         <StyledNameAndButtonWrapper>
           <StyledTaskName></StyledTaskName>
           <StyledEditButtonWrapper>
-            <Editbutton />
+            <Editbutton onClick={onEditButtonClick} />
           </StyledEditButtonWrapper>
         </StyledNameAndButtonWrapper>
       )}
@@ -24,7 +37,11 @@ export const Task = () => {
   );
 };
 
-const StyledWrapper = styled.div``;
+const StyledWrapper = styled.div`
+  display: flex;
+  padding: 2px 6px;
+  width: 100%;
+`;
 
 const StyledCheckboxWrapper = styled.div``;
 
