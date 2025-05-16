@@ -1,5 +1,5 @@
-import { Example } from "./index";
+import { Task } from "./index";
 
-export default { component: Example };
+export default { component: Task };
 
 export const Default = {};
