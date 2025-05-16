@@ -8,9 +8,9 @@ export const Task = ({
   onTaskNameChange,
   onTaskComplete,
   taskName = "",
-  defaultsEditing = false,
+  defaultIsEditing = false,
 }) => {
-  const [isEditing, setIsEditing] = useState(defaultsEditing);
+  const [isEditing, setIsEditing] = useState(defaultIsEditing);
   const onEditComplete = (value) => {
     setIsEditing(false);
     onTaskNameChange(value);
@@ -27,7 +27,7 @@ export const Task = ({
         <Input onEditComplete={onEditComplete} defaultValue={taskName} />
       ) : (
         <StyledNameAndButtonWrapper>
-          <StyledTaskName></StyledTaskName>
+          <StyledTaskName>{taskName}</StyledTaskName>
           <StyledEditButtonWrapper>
             <Editbutton onClick={onEditButtonClick} />
           </StyledEditButtonWrapper>
@@ -49,4 +49,6 @@ const StyledNameAndButtonWrapper = styled.div``;
 
 const StyledTaskName = styled.div``;
 
-const StyledEditButtonWrapper = styled.div``;
+const StyledEditButtonWrapper = styled.div`
+  padding-left: 8px;
+`;
