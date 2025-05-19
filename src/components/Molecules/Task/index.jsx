@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { Checkbox } from "../../Atoms/Checkbox";
 import { Editbutton } from "../../Atoms/Editbutton";
 import { Input } from "../../Atoms/Input";
+import COLOR from "../../../variables/color";
+import FONTFAMILY from "../../../variables/font_family";
+import TEXT from "../../../variables/texts";
 
 export const Task = ({
   onTaskNameChange,
@@ -39,16 +42,32 @@ export const Task = ({
 
 const StyledWrapper = styled.div`
   display: flex;
+  align-items: center;
   padding: 2px 6px;
   width: 100%;
 `;
 
-const StyledCheckboxWrapper = styled.div``;
+const StyledCheckboxWrapper = styled.div`
+  align-items: center;
+  margin-right: 10px;
+`;
 
-const StyledNameAndButtonWrapper = styled.div``;
+const StyledNameAndButtonWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+`;
 
-const StyledTaskName = styled.div``;
-
+const StyledTaskName = styled.div`
+  width: 100%;
+  margin-right: 10px;
+  font-family: ${FONTFAMILY.NOTO_SANS};
+  font-size: ${TEXT.S};
+  color: ${COLOR.LIGHT_GRAY};
+`;
 const StyledEditButtonWrapper = styled.div`
-  padding-left: 8px;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 `;
