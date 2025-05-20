@@ -33,6 +33,7 @@ const StyledInput = styled.input`
   padding: 0px 4px;
   border: none;
   border-radius: 2px;
+  box-sizing: border-box;
   outline: none;
   background-color: ${COLOR.BLACK};
   color: ${COLOR.LIGHT_GRAY};
