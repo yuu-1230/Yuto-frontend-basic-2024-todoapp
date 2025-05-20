@@ -10,16 +10,20 @@ import TEXT from "../../../variables/texts";
 export const Task = ({
   onTaskNameChange,
   onTaskComplete,
-  taskName = "",
+  taskName = "taskname",
   defaultIsEditing = false,
 }) => {
   const [isEditing, setIsEditing] = useState(defaultIsEditing);
   const onEditComplete = (value) => {
+    console.log(`taskname changed: ${value}`);
     setIsEditing(false);
     onTaskNameChange(value);
   };
   const onEditButtonClick = () => {
     setIsEditing(true);
+  };
+  onTaskComplete = () => {
+    return console.log("Task Completed");
   };
   return (
     <StyledWrapper>
