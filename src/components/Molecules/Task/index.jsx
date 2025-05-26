@@ -53,13 +53,11 @@ const StyledWrapper = styled.div`
 `;
 
 const StyledCheckboxWrapper = styled.div`
-  box-sizing: border-box;
   align-items: center;
   margin-right: 10px;
 `;
 
 const StyledNameAndButtonWrapper = styled.div`
-  box-sizing: border-box;
   display: flex;
   width: 100%;
   align-items: center;
@@ -67,7 +65,6 @@ const StyledNameAndButtonWrapper = styled.div`
 `;
 
 const StyledTaskName = styled.div`
-  box-sizing: border-box;
   width: 100%;
   margin-right: 10px;
   font-family: ${FONTFAMILY.NOTO_SANS};
@@ -75,7 +72,6 @@ const StyledTaskName = styled.div`
   color: ${COLOR.LIGHT_GRAY};
 `;
 const StyledEditButtonWrapper = styled.div`
-  box-sizing: border-box;
   display: flex;
   align-items: center;
   margin-left: auto;
