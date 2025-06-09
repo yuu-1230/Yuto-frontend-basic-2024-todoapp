@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { AddTaskButton } from "../../Atoms/AddTaskButton";
 import { Task } from "../../Molecules/Task";
+import COLOR from "../../../variables/color";
 export const TodoCard = () => {
   const [taskList, setTaskList] = useState([]);
   const onAddTaskButtonClick = () => {
@@ -39,5 +40,14 @@ export const TodoCard = () => {
   );
 };
 
-const StyledWrapper = styled.div``;
-const StyledTaskList = styled.div``;
+const StyledWrapper = styled.div`
+  box-sizing: border-box;
+  width: 500px;
+  padding: 20px;
+  background-color: ${COLOR.LIGHT_BLACK};
+`;
+const StyledTaskList = styled.div`
+  > * {
+    margin-top: 10px;
+  }
+`;
