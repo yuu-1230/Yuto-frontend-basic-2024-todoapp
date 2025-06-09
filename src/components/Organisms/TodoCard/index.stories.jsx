@@ -1,5 +1,7 @@
-import { Example } from "./index";
+import { TodoCard } from "./index";
 
-export default { component: Example };
+export default {
+  component: TodoCard,
+};
 
 export const Default = {};
