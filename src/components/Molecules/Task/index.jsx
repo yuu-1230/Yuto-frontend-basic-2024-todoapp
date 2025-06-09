@@ -22,9 +22,6 @@ export const Task = ({
   const onEditButtonClick = () => {
     setIsEditing(true);
   };
-  onTaskComplete = () => {
-    return console.log("Task Completed");
-  };
   return (
     <StyledWrapper>
       <StyledCheckboxWrapper>

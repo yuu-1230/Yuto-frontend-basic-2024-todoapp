@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import COLOR from "../../../variables/color";
 import Plus from "../../../assets/svg/plus.svg";
-export const AddTaskButton = () => {
+export const AddTaskButton = ({ onClick }) => {
   return (
-    <StyledAddTaskButton>
+    <StyledAddTaskButton onClick={onClick}>
       <StyledImg src={Plus} />
       <StyledText>タスクを追加</StyledText>
     </StyledAddTaskButton>
