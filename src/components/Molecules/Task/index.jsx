@@ -42,6 +42,7 @@ export const Task = ({
 };
 
 const StyledWrapper = styled.div`
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   padding: 2px 6px;
