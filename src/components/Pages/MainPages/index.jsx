@@ -17,6 +17,7 @@ export const MainPage = () => {
 };
 
 const StyledWrapper = styled.div`
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +26,13 @@ const StyledTitle = styled.div`
   font-family: ${FONTFAMILY.ROBOTO};
   color: ${COLOR.WHITE};
   ${TEXT.L};
+  @media (max-width: 1000px) {
+    ${TEXT.M};
+  }
 `;
 const TodoCardWrapper = styled.div`
-  margin-top: 20px;
+  margin: 20px;
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 `;
