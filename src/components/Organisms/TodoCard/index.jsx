@@ -45,6 +45,10 @@ const StyledWrapper = styled.div`
   width: 500px;
   padding: 20px;
   background-color: ${COLOR.LIGHT_BLACK};
+  border-radius: 4px;
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 const StyledTaskList = styled.div`
   > * {
