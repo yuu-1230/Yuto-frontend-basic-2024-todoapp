@@ -16,9 +16,13 @@ export const TodoCard = () => {
     setTaskList(taskList.filter((_, i) => i !== index));
   };
   const onTaskNameChange = (value, index) => {
-    setTaskList(
-      taskList.map((task, i) => (i === index ? { ...task, name: value } : task))
-    );
+    if (value === "") {
+      setTaskList((prev) => prev.filter((_, i) => i != index));
+    } else {
+      setTaskList((prev) =>
+        prev.map((task, i) => (i === index ? { ...task, name: value } : task))
+      );
+    }
   };
   return (
     <StyledWrapper>
