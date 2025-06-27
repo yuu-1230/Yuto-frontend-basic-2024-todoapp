@@ -1,21 +1,11 @@
-...
+import React from "react";
+// 例）isActive の Props に応じて文字色を変化させたい場合
+import styled from "styled-components";
 
-import { AlertHandlerProvider } from "../../../contexts/alert_handler";
-import AlertManager from "../../Organisms/AlertManager";
+const Component = () => {
+  return <Example isActive={true}> hogehoge </Example>;
+};
 
-...
-
-export const Default = Template.bind({});
-Default.args = {};
-/*以下を追加*/
-Default.decorators = [
-  (Story) => (
-    <div>
-      <AlertHandlerProvider>
-        <AlertManager />
-        <Story />
-      </AlertHandlerProvider>
-    </div>
-  ),
-];
-
+const Example = styled.div`
+  color: ${(props) => (props.isActive ? "red" : "blue")};
+`;
