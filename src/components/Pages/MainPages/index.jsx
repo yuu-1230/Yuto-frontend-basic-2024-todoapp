@@ -4,6 +4,8 @@ import styled from "styled-components";
 import FONTFAMILY from "../../../variables/font_family";
 import COLOR from "../../../variables/color";
 import TEXT from "../../../variables/texts";
+import { AlertHandlerProvider } from "../../../contexts/alert_handler";
+import AlertManager from "../../Organisms/AlertManager";
 
 export const MainPage = () => {
   return (
@@ -15,7 +17,19 @@ export const MainPage = () => {
     </StyledWrapper>
   );
 };
-
+export const Default = Template.bind({});
+Default.args = {};
+/*以下を追加*/
+Default.decorators = [
+  (Story) => (
+    <div>
+      <AlertHandlerProvider>
+        <AlertManager />
+        <Story />
+      </AlertHandlerProvider>
+    </div>
+  ),
+];
 const StyledWrapper = styled.div`
   padding: 20px;
   display: flex;
