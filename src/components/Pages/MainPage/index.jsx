@@ -5,7 +5,7 @@ import FONTFAMILY from "../../../variables/font_family";
 import TEXT from "../../../variables/texts";
 import COLOR from "../../../variables/color";
 
-export const MainPage = () => {
+const MainPage = () => {
   return (
     <StyledWrapper>
       <StyledTitle>SIMPLE TODO APP</StyledTitle>
@@ -38,3 +38,4 @@ const TodoCardWrapper = styled.div`
     width: 100%;
   }
 `;
+export default MainPage;
