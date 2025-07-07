@@ -1,5 +1,5 @@
 import React from "react";
-import { MainPage } from "./index";
+import MainPage from "./index";
 import { AlertHandlerProvider } from "../../../contexts/alert_handler";
 import { AlertManager } from "../../Organisms/AlertManager";
 

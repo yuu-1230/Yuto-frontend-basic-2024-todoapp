@@ -5,7 +5,7 @@ import FONTFAMILY from "../../../variables/font_family";
 import TEXT from "../../../variables/texts";
 import COLOR from "../../../variables/color";
 
-const MainPage = () => {
+export const MainPage = () => {
   return (
     <StyledWrapper>
       <StyledTitle>SIMPLE TODO APP</StyledTitle>
