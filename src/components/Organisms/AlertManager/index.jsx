@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import { useAlertHandlerContext } from "../../components/AlertManager";
-import { Alert } from "../Atoms/Alert";
+import { useAlertHandlerContext } from "../../../contexts/alert_handler";
+import { Alert } from "../../Atoms/Alert";
 
-const AlertManager = () => {
+export const AlertManager = () => {
   const { visible, errorText, closeAlert } = useAlertHandlerContext();
 
   useEffect(() => {

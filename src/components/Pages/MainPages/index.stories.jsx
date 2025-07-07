@@ -1,16 +1,21 @@
 import React from "react";
+import { MainPage } from "./index";
 import { AlertHandlerProvider } from "../../../contexts/alert_handler";
-import { Alert } from "../../Atoms/Alert";
+import { AlertManager } from "../../Organisms/AlertManager";
 
-export default { Component: Alert };
-export const Default = {
-  args: {},
+export default {
+  title: "Pages/MainPage",
+  component: MainPage,
 };
-/*以下を追加*/
+const Template = (args) => <MainPage {...args} />;
+export const Default = Template.bind({});
+Default.args = {};
+
 Default.decorators = [
   (Story) => (
     <div>
       <AlertHandlerProvider>
+        <AlertManager />
         <Story />
       </AlertHandlerProvider>
     </div>
