@@ -1,10 +1,23 @@
-import React from "react";
-import { useAlertHandlerContext } from "path/to/contexts/alert_handler";
+import React, { useEffect } from "react";
+import { useAlertHandlerContext } from "../../components/AlertManager";
+import { Alert } from "../Atoms/Alert";
 
-/* コンポーネント関数内 */
-//Contextを取得
-const AlertHandlerContext = useAlertHandlerContext();
+const AlertManager = () => {
+  const { visible, errorText, closeAlert } = useAlertHandlerContext();
 
-//AlertHandlerContextから直接値が取り出せる
-console.log(AlertHandlerContext.visible);
-AlertHandlerContext.setAlert("message"); //Alertの表示
+  useEffect(() => {
+    let timer;
+    if (visible) {
+      timer = setTimeout(() => {
+        closeAlert();
+      }, 5000); // 5000ミリ秒 = 5秒
+    }
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [visible, closeAlert]);
+  return <Alert message={errorText} isVisible={visible} />;
+};
+
+export default AlertManager;

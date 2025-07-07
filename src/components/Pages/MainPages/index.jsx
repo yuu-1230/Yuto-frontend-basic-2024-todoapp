@@ -5,7 +5,8 @@ import FONTFAMILY from "../../../variables/font_family";
 import COLOR from "../../../variables/color";
 import TEXT from "../../../variables/texts";
 import { AlertHandlerProvider } from "../../../contexts/alert_handler";
-import AlertManager from "../../Organisms/AlertManager";
+import AlertManager from "../../AlertManager/index.jsx";
+import { Template } from "webpack";
 
 export const MainPage = () => {
   return (
@@ -17,7 +18,7 @@ export const MainPage = () => {
     </StyledWrapper>
   );
 };
-export const Default = Template.bind({});
+const Default = Template.bind({});
 Default.args = {};
 /*以下を追加*/
 Default.decorators = [
