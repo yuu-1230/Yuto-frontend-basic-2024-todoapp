@@ -1,33 +1,30 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.jsx",
   output: {
     filename: "main.js",
-    path: path.resolve(__dirname, "public"),
+    path: path.resolve(__dirname, "dist"), // ← distに出力
+    clean: true, // 毎回クリア
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
+        exclude: /node_modules/,
         use: [
           {
             loader: "babel-loader",
             options: {
-              presets: ["@babel/preset-env", "@babel/react"],
+              presets: ["@babel/preset-env", "@babel/preset-react"], // ←修正：react preset名
             },
           },
         ],
       },
       {
-        test: /\.css$/,
-        use: [
-          "style-loader",
-          {
-            loader: "css-loader",
-            options: { url: false },
-          },
-        ],
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.svg$/,
@@ -38,8 +35,17 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx"],
   },
-  target: ["web", "es5"],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./public/index.html", // ← srcでなくpublic
+    }),
+  ],
   devServer: {
-    contentBase: "./public",
+    static: {
+      directory: path.join(__dirname, "public"),
+    },
+    port: 8080,
+    open: true,
   },
+  target: ["web", "es5"],
 };
