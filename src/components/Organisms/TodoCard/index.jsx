@@ -23,7 +23,6 @@ export const TodoCard = () => {
   }, [taskList]);
   const onTaskComplete = (index) => {
     setTaskList(taskList.filter((_, i) => i !== index));
-    setAlert("タスクの名前が設定されていません。");
   };
   const onTaskNameChange = (value, index) => {
     if (value === "") {
