@@ -1,8 +1,11 @@
 import React from "react";
-import { TodoCard } from "./index";
 import { AlertHandlerProvider } from "../../../contexts/alert_handler";
+import { Alert } from "./index";
 
-export default { component: TodoCard };
+export default {
+  title: "Atoms/Alert",
+  component: Alert,
+};
 export const Default = {
   args: {},
 };
