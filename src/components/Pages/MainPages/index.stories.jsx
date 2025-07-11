@@ -1,7 +1,7 @@
 import React from "react";
 import { MainPage } from "./index";
-import { AlertHandlerProvider } from "../../contexts/alert_handler";
-import { AlertManager } from "../Organisms/AlertManager/index";
+import { AlertHandlerProvider } from "../../../contexts/alert_handler";
+import AlertManager from "../../Organisms/AlertManager";
 
 export default { component: MainPage };
 const Template = (args) => <MainPage {...args} />;
