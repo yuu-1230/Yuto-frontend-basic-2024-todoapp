@@ -2,6 +2,7 @@
   "name": "fb2022-todoapp",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "https://yuu-1230.github.io/Yuto-frontend-basic-2024-todoapp/",
   "repository": "https://github.com/shinonome-inc/frontend-basic-2022-todoapp.git",
   "author": "MoAI522",
   "license": "MIT",
@@ -10,7 +11,9 @@
     "dev": "webpack serve --open --mode development",
     "build": "webpack --mode production",
     "build-storybook": "storybook build -s ./src",
-    "chromatic": "npx chromatic --project-token=072222ef1ac3"
+    "chromatic": "npx chromatic --project-token=072222ef1ac3",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d docs"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -24,6 +27,7 @@
     "css-loader": "^6.2.0",
     "eslint": "^8.56.0",
     "eslint-plugin-react": "^7.33.2",
+    "gh-pages": "^6.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "storybook": "^7.4.2",

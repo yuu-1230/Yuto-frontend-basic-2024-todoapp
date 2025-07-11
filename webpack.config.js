@@ -5,7 +5,8 @@ module.exports = {
   entry: "./src/index.jsx",
   output: {
     filename: "main.js",
-    path: path.resolve(__dirname, "dist"), // ← distに出力
+    path: path.resolve(__dirname, "docs"), // ← docsに出力
+    publicPath: "/Yuto-frontend-basic-2024-todoapp/", // ← GitHub Pages用のパス
     clean: true, // 毎回クリア
   },
   module: {
