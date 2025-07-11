@@ -2,8 +2,8 @@ import React from "react";
 import { TodoCard } from "../../Organisms/TodoCard";
 import styled from "styled-components";
 import FONTFAMILY from "../../../variables/font_family";
-import TEXT from "../../../variables/texts";
 import COLOR from "../../../variables/color";
+import TEXT from "../../../variables/texts";
 
 export const MainPage = () => {
   return (
@@ -17,13 +17,11 @@ export const MainPage = () => {
 };
 
 const StyledWrapper = styled.div`
-  padding: 60px 20px 20px 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
 `;
-
 const StyledTitle = styled.div`
   font-family: ${FONTFAMILY.ROBOTO};
   color: ${COLOR.WHITE};
@@ -38,4 +36,3 @@ const TodoCardWrapper = styled.div`
     width: 100%;
   }
 `;
-export default MainPage;
